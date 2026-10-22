@@ -1,0 +1,35 @@
+modLoader="javafml"
+loaderVersion="[47,)"
+license="MIT"
+
+[[mods]]
+modId="sbwinfiniteammo"
+version="1.0.0"
+displayName="SBW Infinite Vehicle Ammo"
+authors="Hans"
+description='''
+Gives every Superb Warfare vehicle weapon an infinite ammo reserve. Magazines still empty and reload
+on their normal timers; handheld guns are not affected. Toggle with infinite_vehicle_ammo in
+serverconfig/sbwinfiniteammo-server.toml.
+'''
+
+[[dependencies.sbwinfiniteammo]]
+modId="forge"
+mandatory=true
+versionRange="[47,)"
+ordering="NONE"
+side="BOTH"
+
+[[dependencies.sbwinfiniteammo]]
+modId="minecraft"
+mandatory=true
+versionRange="[1.20.1,1.21)"
+ordering="NONE"
+side="BOTH"
+
+[[dependencies.sbwinfiniteammo]]
+modId="superbwarfare"
+mandatory=true
+versionRange="[0.8.9.2,0.8.10)"
+ordering="AFTER"
+side="BOTH"
