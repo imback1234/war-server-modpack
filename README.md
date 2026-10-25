@@ -30,6 +30,7 @@ CurseForge downloads almost every mod from its own site. The zip only carries th
 | `Presence Footsteps [FORGE] 1.0.0.jar` | 1Influence | MIT | [Presence Footsteps (Forge)](https://modrinth.com/mod/presence-footsteps-forge), not hosted on CurseForge. |
 | `rethinking-voxels_r0.1-beta9.zip` | gri573 | Complementary License 1.5 | [Rethinking Voxels](https://modrinth.com/shader/rethinking-voxels) shader, bundled under section 1.2 (modpacks). Any problems it causes in this modpack are the modpack author's responsibility, not gri573's. |
 | `config/entityculling.json` | Hans | MIT | Keeps Superb Warfare and AshVehicle vehicles from being culled. |
+| `options.txt` | Hans | MIT | Starting settings: GUI scale 2. Minecraft reads it on the profile's first launch; players can change it afterwards. |
 
 All other mods are installed by CurseForge from their authors' CurseForge pages, under their own licenses.
 Superb Warfare is the official release; nothing in this repository changes or redistributes it.
