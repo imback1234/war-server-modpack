@@ -32,8 +32,11 @@ Mixin does not allow a mixin class to add public static methods, so the three st
 `WarVehicleFixMixinPlugin` while the class loads; each one forwards to the method with the same signature in
 `LegacyApi`.
 
-Needed on the server and on every player's computer. It has no network channel, so a player without it can still
-join (and still crashes on those planes).
+Required on the server and on every player's computer. Without it a player's game still crashes on those planes, so
+the mod registers a network channel (`warvehiclefix:check`, no packets) and the server sends any player whose game
+lacks it back to the menu with a message telling them to download the newest modpack (`ModpackCheck`). Both sides
+accept a missing channel during Forge's login handshake, so the player sees that message instead of Forge's
+"mismatched mod channel list" error.
 
 Build: put the official `superbwarfare-0.8.9.2-mc1.20.1-65d985a64-all.jar` in `libs/` as `superbwarfare-0.8.9.2.jar`,
-then run `gradlew build` (ForgeGradle 6, Forge 1.20.1-47.4.10). The jar is `build/libs/War-Server-Vehicle-Fix-1.0.0.jar`.
+then run `gradlew build` (ForgeGradle 6, Forge 1.20.1-47.4.10). The jar is `build/libs/War-Server-Vehicle-Fix-1.1.0.jar`.

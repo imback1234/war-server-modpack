@@ -26,12 +26,15 @@ import net.minecraftforge.fml.common.Mod;
  *
  * <p>It also fixes one AshVehicle bug that crashes the server on any Superb Warfare version: the nuke bomb passes null
  * to {@code CustomExplosion.Builder.withParticleType}, which is now treated as Superb Warfare's own default (null).
+ *
+ * <p>Players need it too, so the server sends players without it away with an update message ({@link ModpackCheck}).
  */
 @Mod(WarVehicleFix.MOD_ID)
 public final class WarVehicleFix {
     public static final String MOD_ID = "warvehiclefix";
 
     public WarVehicleFix() {
+        ModpackCheck.register();
         LogUtils.getLogger().info("War Server Vehicle Fix: restored the 7 Superb Warfare 0.8.9 members AshVehicle 4.6 uses, nuke bomb fixed");
     }
 }
