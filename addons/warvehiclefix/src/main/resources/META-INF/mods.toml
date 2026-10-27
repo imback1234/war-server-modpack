@@ -1,0 +1,27 @@
+modLoader = "javafml"
+loaderVersion = "[47,)"
+license = "MIT"
+issueTrackerURL = "https://github.com/imback1234/war-server-modpack/issues"
+
+[[mods]]
+modId = "warvehiclefix"
+version = "1.0.0"
+displayName = "War Server Vehicle Fix"
+authors = "Hans"
+description = '''Puts back the 5 functions and 2 fields of Superb Warfare 0.8.9 that AshVehicle 4.6 still uses but Superb Warfare 0.8.9.2 removed. Without them, AshVehicle's planes crash the game when shown in the Vehicle Assembling Table or in the world, and its missiles crash the server. Also stops AshVehicle's nuke bomb from crashing the server when it detonates. Needed on the server and on every player's computer; it sends no data of its own.'''
+# No network channel: a server or player without this mod can still connect.
+displayTest = "IGNORE_ALL_VERSION"
+
+[[dependencies.warvehiclefix]]
+modId = "forge"
+mandatory = true
+versionRange = "[47.3,)"
+ordering = "NONE"
+side = "BOTH"
+
+[[dependencies.warvehiclefix]]
+modId = "superbwarfare"
+mandatory = true
+versionRange = "[0.8.9.2,0.8.10)"
+ordering = "AFTER"
+side = "BOTH"

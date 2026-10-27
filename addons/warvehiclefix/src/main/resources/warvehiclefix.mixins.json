@@ -1,0 +1,16 @@
+{
+  "required": true,
+  "minVersion": "0.8",
+  "package": "dev.hans.warvehiclefix.mixin",
+  "plugin": "dev.hans.warvehiclefix.WarVehicleFixMixinPlugin",
+  "compatibilityLevel": "JAVA_17",
+  "mixins": [
+    "CustomExplosionBuilderMixin",
+    "MissileProjectileMixin",
+    "ProjectileToolMixin",
+    "VehicleEntityMixin"
+  ],
+  "client": [
+    "RenderHelperMixin"
+  ]
+}

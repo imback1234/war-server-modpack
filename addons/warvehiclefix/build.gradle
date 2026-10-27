@@ -1,0 +1,37 @@
+plugins {
+    id 'net.minecraftforge.gradle' version '[6.0.24,6.2)'
+}
+
+version = '1.0.0'
+group = 'dev.hans.warvehiclefix'
+
+base {
+    archivesName = 'War-Server-Vehicle-Fix'
+}
+
+java.toolchain.languageVersion = JavaLanguageVersion.of(17)
+
+minecraft {
+    mappings channel: 'official', version: '1.20.1'
+}
+
+dependencies {
+    minecraft 'net.minecraftforge:forge:1.20.1-47.4.10'
+    // Superb Warfare's own classes keep their names in the release jar, so the fix compiles against it directly.
+    compileOnly files('libs/superbwarfare-0.8.9.2.jar')
+}
+
+tasks.named('jar', Jar).configure {
+    manifest {
+        attributes([
+                'MixinConfigs'          : 'warvehiclefix.mixins.json',
+                'Implementation-Title'  : 'War Server Vehicle Fix',
+                'Implementation-Version': project.version,
+        ])
+    }
+    finalizedBy 'reobfJar'
+}
+
+tasks.withType(JavaCompile).configureEach {
+    options.encoding = 'UTF-8'
+}
