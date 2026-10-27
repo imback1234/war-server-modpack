@@ -56,7 +56,7 @@ CurseForge downloads almost every mod from its own site. The zips only carry the
 | `config/entityculling.json` | Both | Hans | MIT | Keeps Superb Warfare and AshVehicle vehicles from being culled. |
 | `config/explosionoverhaul/explosionoverhaul-client.toml` | Low-end | Hans | MIT | Lighter explosion effects: smaller glow textures, vanilla particle rendering, half the sparks, dust and mist. |
 | `config/particle_core_config.toml` | Low-end | Hans | MIT | Particles are drawn out to 75% of the normal distance. |
-| `options.txt` | Both | Hans | MIT | Starting settings. Standard: GUI scale 2. Low-end: GUI scale 2 plus the lighter settings above. Minecraft reads it on the profile's first launch; players can change it afterwards. |
+| `options.txt` | Both | Hans | MIT | Starting settings. Standard: GUI scale 2. Low-end: GUI scale 2 plus the lighter settings above. Both: 16 keys from other mods moved off gun and vehicle keys (the list is on the website's key binds page). Starts with `version:3465` so Minecraft 1.20.1 reads it as current. Minecraft reads it on the profile's first launch; players can change anything afterwards. |
 
 All other mods are installed by CurseForge from their authors' CurseForge pages, under their own licenses.
 Superb Warfare is the official release; nothing in this repository changes or redistributes it.
